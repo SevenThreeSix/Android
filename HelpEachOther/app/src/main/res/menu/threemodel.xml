@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_walk_guide"
+        android:orderInCategory="70"
+        android:title="步行导航"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item android:id="@+id/action_bike_guide"
+        android:orderInCategory="80"
+        android:title="骑行导航"
+        android:icon="@drawable/bikenavi"
+        app:showAsAction="ifRoom" />
+
+
+    <item
+        android:id="@+id/Map_COMPASS"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/Map_COMPASS" />
+
+    <item
+        android:id="@+id/Map_FOLLOWING"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/Map_FOLLOWING" />
+
+    <item
+        android:id="@+id/Map_NORMAL"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/Map_NORMAL" />
+
+</menu>

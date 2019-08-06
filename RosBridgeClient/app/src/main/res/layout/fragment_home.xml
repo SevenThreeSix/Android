@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/frameLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
+tools:context="com.example.user.rosbridgeclient.Fragment.HomeFragment"
+android:background="@color/colorPrimaryDark"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:id="@+id/batteryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            >
+            <TextView
+                android:id="@+id/DC_TextViewShowElectricPercentage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="\??%"
+                android:textColor="@android:color/holo_green_light"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <com.example.user.rosbridgeclient.BatteryView
+                android:id="@+id/DC_Custom_Battery_view"
+                android:layout_width="81dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/tv_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:singleLine="true"
+                    android:text="temperature"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="45dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:singleLine="true"
+                    android:text="°C"
+                    android:textColor="@android:color/holo_green_light"
+                    android:textSize="45dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            android:gravity="center">
+            <RelativeLayout
+                android:id="@+id/control"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_margin="10dp">
+
+                <ImageButton
+                    android:id="@+id/DC_ImgBtn_Up"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="120dp"
+                    android:src="@drawable/xml_move_up" />
+
+                <ImageButton
+                    android:id="@+id/DC_ImgBtn_Down"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="120dp"
+                    android:src="@drawable/xml_move_down" />
+
+                <ImageButton
+                   android:id="@+id/DC_ImgBtn_Left"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="120dp"
+                    android:src="@drawable/xml_move_left" />
+
+                <ImageButton
+                    android:id="@+id/DC_ImgBtn_Right"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="120dp"
+                   android:src="@drawable/xml_move_right" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_menu_rotate" />
+
+</FrameLayout>
+

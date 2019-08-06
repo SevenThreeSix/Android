@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.user.helpeachother">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!--
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    -->
+    <!-- <uses-permission android:name="android.permission.READ_CONTACTS" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo_neighbor"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="64rB7Ku8noga2WHABQDcMQoY0A45SS3H"></meta-data>
+
+        <activity
+            android:name=".NvgDrawerActivity"
+            android:exported="true"
+            android:label="@string/title_activity_nvg_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_item_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ReleaseActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".MapActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".BNaviGuideActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".WNaviGuideActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".SetEndTimeActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".ItemRevDetailActivity"
+            android:exported="true"
+            android:label="@string/title_activity_item_detail"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".UbnoActivity"
+            android:label="@string/title_activity_ubno"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 支付宝需要添加 -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+
+        <!-- 微信需要添加 -->
+
+        <activity
+            android:name="com.fuqianla.paysdk.wxapi.PaymentActivity"
+            android:launchMode="singleTop" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.fuqianla.paysdk.wxapi.PaymentActivity" />
+
+        <!-- 付钱拉SDK需要添加 -->
+        <activity
+            android:name="com.fuqianla.paysdk.app.FuQianLaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="FQL_APPKEY"
+            android:value="vvd1DTP05Epd9ZiEH7crqQ" />
+    </application>
+
+
+</manifest>

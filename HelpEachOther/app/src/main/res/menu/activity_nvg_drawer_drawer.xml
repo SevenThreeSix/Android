@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/photo"
+            android:title="上传头像" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/xiazaiphoto"
+            android:title="手动头像缓存" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/deletephoto"
+            android:title="删除头像缓存" />
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/paytome"
+            android:title="给商家支付" />
+    </group>
+
+    <item android:title="调启功能接口">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/paybao"
+                android:title="调启支付宝" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/weixin"
+                android:title="调启微信" />
+        </menu>
+    </item>
+
+</menu>

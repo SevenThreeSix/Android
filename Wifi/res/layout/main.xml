@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/AbsoluteLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <hanry.MySurfaceView
+        android:id="@+id/mySurfaceView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/TurnLeft"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        android:layout_x="0dp"
+        android:layout_y="260dp"
+        android:text="左" />
+
+    <Button
+        android:id="@+id/ForWard"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        android:layout_x="70dp"
+        android:layout_y="200dp"
+        android:text="前" />
+
+    <Button
+        android:id="@+id/TurnRight"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        android:layout_x="140dp"
+        android:layout_y="260dp"
+        android:text="右" />
+
+    <Button
+        android:id="@+id/BackWard"
+        android:layout_width="66dp"
+        android:layout_height="55dp"
+        android:layout_x="70dp"
+        android:layout_y="260dp"
+        android:text="后" />
+
+    <Button
+        android:id="@+id/Button1"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="460dp"
+        android:layout_y="10dp"
+        android:text="手 - 合" />
+
+    <Button
+        android:id="@+id/Button2"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="460dp"
+        android:layout_y="60dp"
+        android:text="臂1下" />
+
+    <Button
+        android:id="@+id/Button3"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="460dp"
+        android:layout_y="110dp"
+        android:text="臂2下" />
+
+    <Button
+        android:id="@+id/Button4"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="460dp"
+        android:layout_y="220dp"
+        android:text="机器人" />
+
+    <Button
+        android:id="@+id/Button5"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="460dp"
+        android:layout_y="270dp"
+        android:text="小车" />
+
+    <Button
+        android:id="@+id/Button6"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="390dp"
+        android:layout_y="10dp"
+        android:text="手 - 张" />
+
+    <Button
+        android:id="@+id/Button7"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="390dp"
+        android:layout_y="60dp"
+        android:text="臂1上" />
+
+    <Button
+        android:id="@+id/Button8"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="390dp"
+        android:layout_y="110dp"
+        android:text="臂2上" />
+
+    <Button
+        android:id="@+id/Button9"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="390dp"
+        android:layout_y="220dp"
+        android:text="走路" />
+
+    <Button
+        android:id="@+id/Button0"
+        android:layout_width="66dp"
+        android:layout_height="40dp"
+        android:layout_x="390dp"
+        android:layout_y="270dp"
+        android:text="0" />
+
+</AbsoluteLayout>

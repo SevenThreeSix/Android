@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="76dp"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_ubno">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ubimage"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/face"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dip"
+                    android:text="头像" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="50dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="账号"
+                            android:textSize="@dimen/dt_text_size_normal" />
+
+                        <TextView
+                            android:id="@+id/ubno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_1"
+                            android:gravity="center"
+                            android:text="null"
+                            android:textSize="@dimen/dt_text_size_small" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dip"
+                        android:background="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:layout_width="0dip"
+                        android:layout_height="50dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="昵称"
+                            android:textSize="@dimen/dt_text_size_normal" />
+
+                        <TextView
+                            android:id="@+id/ubname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_2"
+                            android:gravity="center"
+                            android:text="null"
+                            android:textSize="@dimen/dt_text_size_small" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="1dip"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dip"
+                        android:background="@color/colorAccent" />
+
+                    <RelativeLayout
+                        android:id="@+id/email"
+                        android:layout_width="0dip"
+                        android:layout_height="50dip"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="其他"
+                            android:textSize="@dimen/dt_text_size_normal" />
+
+                        <TextView
+                            android:id="@+id/email_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_3"
+                            android:gravity="center"
+                            android:text="991167006@qq.com"
+                            android:textSize="@dimen/dt_text_size_small" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/colorAccent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
