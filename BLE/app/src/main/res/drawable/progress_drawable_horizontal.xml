@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--
+    对layer-list样式，是按照顺序堆叠的，所以最上层的放在最后面，而且如果设置了progressDrawable
+    的属性，再去设置progressbar的background是没有效果的
+    -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="10dp" />         <!-- 圆角 -->
+
+            <solid android:color="@color/LightGrey" />   <!-- 描边 -->
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="10dp"/>
+
+                <gradient
+                    android:angle="0"
+                    android:startColor="@color/MyDarkGrey"
+                    android:endColor="@color/MyDarkGrey"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
+
+<!--
+    <?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+&lt;!&ndash;
+对layer-list样式，是按照顺序堆叠的，所以最上层的放在最后面，而且如果设置了progressDrawable
+的属性，再去设置progressbar的background是没有效果的
+&ndash;&gt;
+<item android:id="@android:id/background">
+    <shape>
+        <corners android:radius="10dp" />         &lt;!&ndash; 圆角 &ndash;&gt;
+
+        <solid android:color="@color/LightGrey" />   &lt;!&ndash; 描边 &ndash;&gt;
+    </shape>
+</item>
+<item android:id="@android:id/progress">
+    <clip>
+        <shape>
+            <corners android:radius="10dp"/>
+            <stroke android:color="@color/LightGrey"
+                android:width="2dp"/>
+            <gradient
+                android:angle="0"
+                android:startColor="@color/Green"
+                android:endColor="@color/DarkSeaGreen"/>
+        </shape>
+    </clip>
+</item>
+</layer-list>-->

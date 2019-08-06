@@ -1,0 +1,258 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:showIn="@layout/activity_displaymain"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+        >
+
+        <!--中间层放数据-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_spo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="---"
+                    android:textColor="@color/White"
+                    android:textSize="110sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_bpmpr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_spo2"
+                    android:layout_centerHorizontal="true"
+                    android:text="---"
+                    android:textColor="@color/White"
+                    android:textSize="70sp"
+                    android:textStyle="bold"
+                    android:typeface="monospace" />
+
+                <TextView
+                    android:id="@+id/tv_pi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_bpmpr"
+                    android:layout_centerHorizontal="true"
+                    android:text="---"
+                    android:textStyle="bold"
+                    android:typeface="monospace"
+                    android:textColor="@color/White"
+                    android:textSize="35sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_pi"
+                    android:layout_alignRight="@+id/progressBar"
+                    android:layout_margin="5dp"
+                    android:layout_below="@+id/progressBar"
+                    android:background="@drawable/png_heart" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_spo2"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tv_spo2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_spo2_boundary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="85/100"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="@color/MyLightGreen"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/t12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="SPo2"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_bpmpr"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tv_bpmpr"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_bpmpr_boundary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="50/150"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="@color/MyLightGreen"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/t22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="bpmPR"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_pi"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/tv_pi"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_pi_boundary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="0/20"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="@color/MyLightGreen"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/t32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:text="%PI"
+                        android:typeface="monospace"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/tv_bpmpr"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="71dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/progress_drawable" />
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignBottom="@+id/tv_bpmpr"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="71dp"
+                    android:background="@drawable/cover_on_progress" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!--最底层放波形图-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView android:id="@+id/device_address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#238745"
+                android:ellipsize="start"
+                android:maxLines="10000"
+                android:maxLength = "100000"
+                android:scrollHorizontally="true"
+                android:singleLine="false"
+                android:fadeScrollbars="false"
+                android:scrollbars="vertical"
+                android:textSize="16sp"
+                android:textColor="#00ff00"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/textview_recive_send_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textColor="@color/White"
+                android:textSize="10sp"
+                android:text="接收字节数：（连接设备蓝牙后显示）"
+                />
+
+            <TextView
+                android:id="@+id/nowTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:typeface="monospace"
+                android:textColor="@color/White"
+                android:textSize="10sp"
+                android:text="当前时间：（连接设备蓝牙后显示）"
+                />
+            <TextView
+                android:id="@+id/newest_recieve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:typeface="monospace"
+                android:textColor="@color/White"
+                android:textSize="10sp"
+                android:text="最新接收的数据：（连接设备蓝牙后显示）"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

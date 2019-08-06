@@ -1,0 +1,195 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <PreferenceCategory
+        android:title="血氧量 报警阈值">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="spo2_switch"
+            android:title="SPO2" />
+
+        <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+        <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+        <PreferenceScreen
+            android:key="screen_preference_spo2_high"
+            android:title="SPO2 High"
+            android:dependency="spo2_switch"
+            android:summary="100">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="spo2_switch_high"
+                android:title="SPO2 High" >
+
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="spo2_switch_high"
+                android:defaultValue="100"
+                android:inputType="number"
+                android:key="spo2_edit_high"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="SPO2 High Value"
+                android:summary="100"/>
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="screen_preference_spo2_low"
+            android:title="SPO2 Low"
+            android:dependency="spo2_switch"
+            android:summary="85">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="spo2_switch_low"
+                android:title="SPO2 Low" >
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="spo2_switch_low"
+                android:defaultValue="85"
+                android:inputType="number"
+                android:key="spo2_edit_low"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="SPO2 Low Value"
+                android:summary="85"/>
+        </PreferenceScreen>
+
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="心率 报警阈值">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="heartRate_switch"
+            android:title="HeartRate" />
+
+        <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+        <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+        <PreferenceScreen
+            android:key="screen_preference_heartRate_high"
+            android:title="HeartRate High"
+            android:dependency="heartRate_switch"
+            android:summary="150">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="heartRate_switch_high"
+                android:title="SPO2 High" >
+
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="heartRate_switch_high"
+                android:defaultValue="150"
+                android:inputType="number"
+                android:key="heartRate_edit_high"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="SPO2 High Value"
+                android:summary="150"/>
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="screen_preference_heartRate_low"
+            android:title="HeartRate Low"
+            android:dependency="heartRate_switch"
+            android:summary="50">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="heartRate_switch_low"
+                android:title="HeartRate Low" >
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="heartRate_switch_low"
+                android:defaultValue="50"
+                android:inputType="number"
+                android:key="heartRate_edit_low"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="HeartRate Low Value"
+                android:summary="50"/>
+        </PreferenceScreen>
+
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="PI 报警阈值">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pi_switch"
+            android:title="PI" />
+
+        <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+        <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+        <PreferenceScreen
+            android:key="screen_preference_pi_high"
+            android:title="PI High"
+            android:dependency="pi_switch"
+            android:summary="20">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="pi_switch_high"
+                android:title="PI High" >
+
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="pi_switch_high"
+                android:defaultValue="20"
+                android:inputType="number"
+                android:key="pi_edit_high"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="PI High Value"
+                android:summary="20"/>
+        </PreferenceScreen>
+
+        <PreferenceScreen
+            android:key="screen_preference_pi_low"
+            android:title="PI Low"
+            android:dependency="pi_switch"
+            android:summary="0">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="pi_switch_low"
+                android:title="PI Low" >
+            </SwitchPreference>
+            <EditTextPreference
+                android:dependency="pi_switch_low"
+                android:defaultValue="0"
+                android:inputType="number"
+                android:key="pi_edit_low"
+                android:maxLines="1"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"
+                android:title="PI Low Value"
+                android:summary="0"/>
+        </PreferenceScreen>
+
+        <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
